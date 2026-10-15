@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="web_standard" name="shell-type">
+  <title>SIP &amp; Wealth Planner — P B Financial Services</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { display: none; }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container": "#f0edf1",
+            "on-error-container": "#93000a",
+            "on-tertiary": "#ffffff",
+            "on-primary-container": "#d3ffd5",
+            "accent-gold": "#D97706",
+            "on-secondary-container": "#571a00",
+            "inverse-on-surface": "#f3f0f4",
+            "tertiary-fixed-dim": "#ffb77d",
+            "surface-bright": "#fbf8fc",
+            "tertiary": "#854600",
+            "surface": "#fbf8fc",
+            "on-background": "#1b1b1e",
+            "error-container": "#ffdad6",
+            "accent-orange": "#EA580C",
+            "surface-container-lowest": "#ffffff",
+            "bg-main": "#FAF8F5",
+            "surface-container-high": "#eae7eb",
+            "background": "#fbf8fc",
+            "bg-card": "#F2EFE9",
+            "error": "#ba1a1a",
+            "primary": "#00652c",
+            "primary-container": "#15803d",
+            "text-dark": "#18181B",
+            "text-muted": "#52525B",
+            "accent-green": "#15803D",
+            "surface-dim": "#dcd9dd"
+          },
+          fontFamily: {
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-sm": ["Playfair Display"],
+            "headline-md": ["Playfair Display"],
+            "headline-lg": ["Playfair Display"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "mono-md": ["JetBrains Mono"],
+            "mono-sm": ["JetBrains Mono"],
+            "mono-lg": ["JetBrains Mono"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-bg-main font-body-md text-text-dark min-h-screen antialiased">
+
+  <!-- NAVIGATION HEADER -->
+  <header class="fixed top-0 w-full z-50 bg-bg-main/90 backdrop-blur-md shadow-[0_1px_8px_rgba(24,24,27,0.04)]">
+    <div class="min-h-20 py-3 max-w-[1200px] mx-auto px-6 md:px-12 flex items-center justify-between">
+      <a class="flex items-center gap-2 text-decoration-none group" href="index.html">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP75ontUFPU-GAQXafk9CHwkV4Ornfzrxgnxou-EYH8bjoy6CJSGB7WF7kUlXciUqyGrosetL3rDxn0W0Dxu2vdOMTV9_Qc1v8-rbnGKO6IZ470XgOG-QPRZfaGHAyoXljhxYzWbPA5Y54Uecp25PYep7YAhPLOuL-5ELkx-ZFMa3YhGYA7PqYWWQgWK8gjxJzr-fikpso8tuDg4zBGBijNZkPostSV3zrPKTZUHgzN7g62Kh1MpmblF5yqUYHYn8S" alt="P B Financial Services Logo" class="h-14 w-auto object-contain" style="max-height: 56px;">
+      </a>
+      <nav class="hidden md:flex items-center gap-8">
+        <a class="font-body-sm text-text-muted hover:text-text-dark transition-colors" href="index.html">Home</a>
+        <a class="font-body-sm text-text-muted hover:text-text-dark transition-colors" href="index.html#how-it-works">How It Works</a>
+        <a class="font-body-sm text-text-muted hover:text-text-dark transition-colors" href="index.html#four-basics">The 4 Basics</a>
+        <a class="font-body-sm text-accent-orange font-semibold transition-colors" href="calculator.html">SIP Calculator</a>
+        <a class="font-body-sm text-text-muted hover:text-text-dark transition-colors" href="index.html#about">About</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a class="hidden sm:inline-flex items-center justify-center font-body-sm font-semibold text-text-dark bg-transparent border border-text-dark/20 px-5 py-2.5 rounded-full hover:bg-text-dark/5 transition-all" href="https://pbfinancial.investwell.app/app" target="_blank" rel="noopener noreferrer" id="nav-dashboard-btn">
+          Dashboard
+        </a>
+        <a class="inline-flex items-center justify-center font-body-sm font-semibold text-on-tertiary bg-accent-orange px-6 py-2.5 rounded-full hover:brightness-105 active:scale-95 transition-all shadow-sm" href="https://pbfinancial.investwell.app/app" target="_blank" rel="noopener noreferrer" id="nav-start-btn">
+          Start Today
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="w-full pt-24 pb-20 bg-bg-main">
+    <div class="max-w-[1200px] mx-auto px-6 md:px-12">
+
+      <!-- HEADER BANNER -->
+      <div class="pt-8 pb-10 text-center max-w-3xl mx-auto">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container border border-text-dark/15 shadow-sm mb-4">
+          <span class="w-2 h-2 rounded-full bg-accent-green animate-pulse"></span>
+          <span class="font-mono-sm uppercase text-text-dark tracking-wider font-semibold">Interactive Wealth Architecture</span>
+        </div>
+        <h1 class="font-headline-lg text-3xl md:text-5xl text-text-dark font-semibold tracking-tight leading-tight mb-4">
+          Plan Your Systematic Wealth
+        </h1>
+        <p class="font-body-lg text-text-muted leading-relaxed">
+          Simulate steady monthly compounding, explore annual step-up multipliers, or calculate the exact monthly investment required to reach your family's financial milestones.
+        </p>
+      </div>
+
+      <!-- PLANNER TABS -->
+      <div class="flex items-center justify-center gap-2 mb-8 p-1.5 bg-bg-card rounded-2xl max-w-md mx-auto border border-text-dark/15 shadow-sm">
+        <button id="tab-wealth" class="planner-tab flex-1 py-2.5 px-4 rounded-xl font-mono-sm text-sm font-semibold bg-surface-container-lowest text-text-dark shadow-sm transition-all" type="button">
+          SIP Wealth Builder
+        </button>
+        <button id="tab-goal" class="planner-tab flex-1 py-2.5 px-4 rounded-xl font-mono-sm text-sm font-semibold text-text-muted hover:text-text-dark transition-all" type="button">
+          Goal Planner (Reverse)
+        </button>
+      </div>
+
+      <!-- TAB 1: SIP WEALTH BUILDER -->
+      <div id="view-wealth" class="space-y-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- CONTROLS COLUMN (7 cols) -->
+          <div class="lg:col-span-7 bg-bg-card rounded-3xl p-6 sm:p-8 border border-text-dark/15 shadow-lg space-y-7">
+            
+            <!-- Monthly Investment Amount -->
+            <div>
+              <div class="flex justify-between items-baseline mb-2">
+                <label for="input-sip-amount" class="font-headline-sm text-base text-text-dark font-semibold flex items-center gap-2">
+                  <span class="material-symbols-outlined text-accent-orange text-[20px]">payments</span>
+                  Monthly SIP Amount
+                </label>
+                <div class="flex items-center gap-1 bg-surface-container-lowest px-3 py-1 rounded-xl border border-text-dark/15 shadow-inner">
+                  <span class="font-mono-md text-text-muted font-medium">₹</span>
+                  <input type="number" id="input-sip-amount" min="500" max="500000" step="500" value="10000" class="font-mono-lg font-bold text-text-dark w-28 text-right bg-transparent focus:outline-none">
+                </div>
+              </div>
+              <input type="range" id="slider-sip-amount" min="1000" max="100000" step="500" value="10000" class="w-full h-2 bg-text-dark/10 rounded-lg appearance-none cursor-pointer accent-accent-orange focus:outline-none mb-3">
+              <div class="flex flex-wrap gap-2">
+                <button type="button" class="sip-preset-chip px-3 py-1 rounded-full text-xs font-mono-sm bg-surface-container-lowest border border-text-dark/15 text-text-muted hover:text-text-dark hover:border-accent-orange transition-all" data-val="2500">₹2.5K</button>
+                <button type="button" class="sip-preset-chip px-3 py-1 rounded-full text-xs font-mono-sm bg-surface-container-lowest border border-text-dark/15 text-text-muted hover:text-text-dark hover:border-accent-orange transition-all" data-val="5000">₹5K</button>
+                <button type="button" class="sip-preset-chip px-3 py-1 rounded-full text-xs font-mono-sm bg-accent-orange/15 border border-accent-orange text-accent-orange font-bold transition-all" data-val="10000">₹10K</button>
+                <button type="button" class="sip-preset-chip px-3 py-1 rounded-full text-xs font-mono-sm bg-surface-container-lowest border border-text-dark/15 text-text-muted hover:text-text-dark hover:border-accent-orange transition-all" data-val="25000">₹25K</button>
+                <button type="button" class="sip-preset-chip px-3 py-1 rounded-full text-xs font-mono-sm bg-surface-container-lowest border border-text-dark/15 text-text-muted hover:text-text-dark hover:border-accent-orange transition-all" data-val="50000">₹50K</button>
+              </div>
+            </div>
+
+            <!-- Expected Return Rate -->
+            <div class="pt-2 border-t border-text-dark/10">
+              <div class="flex justify-between items-baseline mb-2">
+                <label for="input-return-rate" class="font-headline-sm text-base text-text-dark font-semibold flex items-center gap-2">
+                  <span class="material-symbols-outlined text-accent-green text-[20px]">trending_up</span>
+                  Expected Annual Return (% p.a.)
+                </label>
+                <div class="flex items-center gap-1 bg-surface-container-lowest px-3 py-1 rounded-xl border border-text-dark/15 shadow-inner">
+                  <input type="number" id="input-return-rate" min="1" max="30" step="0.5" value="12" class="font-mono-lg font-bold text-accent-green w-16 text-right bg-transparent focus:outline-none">
+                  <span class="font-mono-md text-text-muted font-medium">%</span>
+                </div>
+              </div>
+              <input type="range" id="slider-return-rate" min="6" max="20" step="0.5" value="12" class="w-full h-2 bg-text-dark/10 rounded-lg appearance-none cursor-pointer accent-accent-green focus:outline-none mb-3">
+              <div class="grid grid-cols-3 gap-2">
+                <button type="button" class="return-preset-btn p-2 rounded-xl border border-text-dark/10 bg-surface-container-lowest text-left hover:border-accent-green transition-all" data-rate="9">
+                  <div class="font-mono-sm font-semibold text-text-dark text-xs">9% • Conservative</div>
+                  <div class="text-[11px] text-text-muted">Debt / Hybrid fund</div>
+                </button>
+                <button type="button" class="return-preset-btn active p-2 rounded-xl border border-accent-green bg-accent-green/10 text-left transition-all" data-rate="12">
+                  <div class="font-mono-sm font-semibold text-accent-green text-xs">12% • Balanced</div>
+                  <div class="text-[11px] text-text-muted">Index / Large cap</div>
+                </button>
+                <button type="button" class="return-preset-btn p-2 rounded-xl border border-text-dark/10 bg-surface-container-lowest text-left hover:border-accent-green transition-all" data-rate="15">
+                  <div class="font-mono-sm font-semibold text-text-dark text-xs">15% • Aggressive</div>
+                  <div class="text-[11px] text-text-muted">Mid / Flexi cap</div>
+                </button>
+              </div>
+            </div>
+
+            <!-- Investment Time Horizon -->
+            <div class="pt-2 border-t border-text-dark/10">
+              <div class="flex justify-between items-baseline mb-2">
+                <label for="input-years" class="font-headline-sm text-base text-text-dark font-semibold flex items-center gap-2">
+                  <span class="material-symbols-outlined text-accent-gold text-[20px]">calendar_month</span>
+                  Investment Horizon
+                </label>
+                <div class="flex items-center gap-1 bg-surface-container-lowest px-3 py-1 rounded-xl border border-text-dark/15 shadow-inner">
+                  <input type="number" id="input-years" min="1" max="40" step="1" value="15" class="font-mono-lg font-bold text-text-dark w-14 text-right bg-transparent focus:outline-none">
+                  <span class="font-mono-md text-text-muted font-medium">Yrs</span>
+                </div>
+              </div>
+              <input type="range" id="slider-years" min="1" max="35" step="1" value="15" class="w-full h-2 bg-text-dark/10 rounded-lg appearance-none cursor-pointer accent-accent-gold focus:outline-none mb-3">
+              <div class="flex flex-wrap gap-2">
+                <button type="button" class="years-preset-chip px-3 py-1 rounded-full text-xs font-mono-sm bg-surface-container-lowest border border-text-dark/15 text-text-muted hover:text-text-dark transition-all" data-years="5">5 Yrs</button>
+                <button type="button" class="years-preset-chip px-3 py-1 rounded-full text-xs font-mono-sm bg-surface-container-lowest border border-text-dark/15 text-text-muted hover:text-text-dark transition-all" data-years="10">10 Yrs</button>
+                <button type="button" class="years-preset-chip px-3 py-1 rounded-full text-xs font-mono-sm bg-accent-gold/15 border border-accent-gold text-accent-gold font-bold transition-all" data-years="15">15 Yrs</button>
+                <button type="button" class="years-preset-chip px-3 py-1 rounded-full text-xs font-mono-sm bg-surface-container-lowest border border-text-dark/15 text-text-muted hover:text-text-dark transition-all" data-years="20">20 Yrs</button>
+                <button type="button" class="years-preset-chip px-3 py-1 rounded-full text-xs font-mono-sm bg-surface-container-lowest border border-text-dark/15 text-text-muted hover:text-text-dark transition-all" data-years="25">25 Yrs</button>
+                <button type="button" class="years-preset-chip px-3 py-1 rounded-full text-xs font-mono-sm bg-surface-container-lowest border border-text-dark/15 text-text-muted hover:text-text-dark transition-all" data-years="30">30 Yrs</button>
+              </div>
+            </div>
+
+            <!-- Annual Step-Up Feature (The Secret Weapon) -->
+            <div class="pt-3 border-t border-text-dark/10">
+              <div class="p-4 rounded-2xl bg-surface-container-lowest border border-text-dark/15">
+                <div class="flex items-center justify-between mb-2">
+                  <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-accent-orange text-[20px]">rocket_launch</span>
+                    <span class="font-headline-sm text-sm font-semibold text-text-dark">Annual Step-Up SIP (Top-Up)</span>
+                  </div>
+                  <label class="relative inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="toggle-stepup" class="sr-only peer">
+                    <div class="w-11 h-6 bg-text-dark/15 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-accent-orange"></div>
+                  </label>
+                </div>
+                <p class="text-xs text-text-muted leading-relaxed mb-3">
+                  As your career advances, raise your monthly contribution by a modest percentage every year. Watch your compounding supercharge.
+                </p>
+                <div id="stepup-controls" class="hidden grid grid-cols-4 gap-2 pt-1 border-t border-text-dark/10">
+                  <button type="button" class="stepup-pct-btn p-1.5 rounded-lg border border-accent-orange bg-accent-orange/15 font-mono-sm text-xs font-bold text-accent-orange text-center transition-all" data-pct="5">+5% / yr</button>
+                  <button type="button" class="stepup-pct-btn p-1.5 rounded-lg border border-text-dark/10 bg-bg-card font-mono-sm text-xs text-text-muted text-center hover:border-accent-orange transition-all" data-pct="10">+10% / yr</button>
+                  <button type="button" class="stepup-pct-btn p-1.5 rounded-lg border border-text-dark/10 bg-bg-card font-mono-sm text-xs text-text-muted text-center hover:border-accent-orange transition-all" data-pct="15">+15% / yr</button>
+                  <button type="button" class="stepup-pct-btn p-1.5 rounded-lg border border-text-dark/10 bg-bg-card font-mono-sm text-xs text-text-muted text-center hover:border-accent-orange transition-all" data-pct="20">+20% / yr</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- RESULTS CARD COLUMN (5 cols) -->
+          <div class="lg:col-span-5 space-y-6">
+            
+            <!-- Main Result Card -->
+            <div class="bg-bg-card rounded-3xl p-6 sm:p-8 border border-text-dark/15 shadow-xl relative overflow-hidden">
+              <div class="absolute -right-10 -bottom-10 opacity-5 pointer-events-none select-none">
+                <span class="material-symbols-outlined text-[200px]">account_balance_wallet</span>
+              </div>
+
+              <div class="flex items-center justify-between mb-4">
+                <span class="font-mono-sm uppercase text-text-muted text-xs tracking-wider">Projected Future Wealth</span>
+                <span id="badge-stepup-indicator" class="hidden px-2 py-0.5 rounded-full bg-accent-orange/15 text-accent-orange font-mono-sm text-xs font-bold">+10% Step-Up</span>
+              </div>
+
+              <!-- Grand Total Display -->
+              <div class="mb-6">
+                <div class="font-headline-lg text-4xl sm:text-5xl text-accent-green font-bold tracking-tight" id="res-total-wealth">
+                  ₹50,45,760
+                </div>
+                <div class="flex items-center gap-2 mt-1 font-mono-sm text-xs text-text-muted">
+                  <span>Growth Multiplier:</span>
+                  <span class="text-accent-green font-bold text-sm bg-on-primary-container px-2 py-0.5 rounded-full" id="res-multiplier">2.8x</span>
+                  <span id="res-gain-pct" class="text-text-muted">(+180% return)</span>
+                </div>
+              </div>
+
+              <!-- Visual Proportion Donut / Segment -->
+              <div class="p-4 rounded-2xl bg-surface-container-lowest border border-text-dark/10 mb-6">
+                <div class="flex items-center justify-between font-mono-sm text-xs mb-2">
+                  <span class="flex items-center gap-1.5 text-text-muted">
+                    <span class="w-3 h-3 rounded-full bg-text-dark/30 inline-block"></span>
+                    Invested Capital
+                  </span>
+                  <span class="font-bold text-text-dark" id="res-invested">₹18,00,000</span>
+                </div>
+                <div class="flex items-center justify-between font-mono-sm text-xs mb-3">
+                  <span class="flex items-center gap-1.5 text-accent-green font-medium">
+                    <span class="w-3 h-3 rounded-full bg-accent-green inline-block"></span>
+                    Compound Returns
+                  </span>
+                  <span class="font-bold text-accent-green" id="res-growth">₹32,45,760</span>
+                </div>
+                <!-- Progress Bar -->
+                <div class="w-full h-3 bg-text-dark/10 rounded-full overflow-hidden flex">
+                  <div id="bar-wealth-invested" class="bg-text-dark/40 h-full transition-all duration-500" style="width: 35.6%;"></div>
+                  <div id="bar-wealth-growth" class="bg-accent-green h-full transition-all duration-500" style="width: 64.4%;"></div>
+                </div>
+              </div>
+
+              <!-- Inflation Adjusted Toggle -->
+              <div class="p-3.5 rounded-xl bg-surface-container-lowest border border-text-dark/10 mb-6 flex items-center justify-between">
+                <div>
+                  <span class="font-mono-sm text-xs font-semibold text-text-dark block">Adjust for 6% Inflation</span>
+                  <span class="text-[11px] text-text-muted">Real purchasing power in today's rupee</span>
+                </div>
+                <div class="text-right">
+                  <span class="font-mono-md font-bold text-accent-gold text-sm" id="res-inflation-val">₹21.05 Lakhs</span>
+                </div>
+              </div>
+
+              <!-- Callout CTA -->
+              <a href="https://pbfinancial.investwell.app/app" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center font-body-md font-semibold text-on-tertiary bg-accent-orange px-6 py-3.5 rounded-full hover:brightness-105 active:scale-95 transition-all shadow-md text-center">
+                Start This SIP Today →
+              </a>
+              <span class="font-mono-sm text-[11px] text-text-muted text-center block mt-3">
+                Zero lock-in • Modify or pause anytime • 100% paperless
+              </span>
+
+            </div>
+
+            <!-- Milestone Card -->
+            <div class="bg-surface-container-lowest rounded-2xl p-5 border border-text-dark/15 shadow-sm">
+              <span class="font-mono-sm text-xs uppercase text-text-muted tracking-wider block mb-3 font-semibold">Key Compounding Milestones</span>
+              <div class="space-y-3 font-mono-sm text-xs">
+                <div class="flex justify-between items-center pb-2 border-b border-text-dark/10">
+                  <span class="text-text-muted">₹10 Lakhs Milestone:</span>
+                  <span class="font-bold text-text-dark" id="milestone-10l">Reached in ~5.2 Years</span>
+                </div>
+                <div class="flex justify-between items-center pb-2 border-b border-text-dark/10">
+                  <span class="text-text-muted">₹25 Lakhs Milestone:</span>
+                  <span class="font-bold text-text-dark" id="milestone-25l">Reached in ~9.8 Years</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-text-muted">₹1 Crore Milestone:</span>
+                  <span class="font-bold text-accent-green" id="milestone-1cr">Reached in ~20.1 Years</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- YEAR-BY-YEAR ACCUMULATION SCHEDULE -->
+        <div class="bg-bg-card rounded-3xl p-6 sm:p-8 border border-text-dark/15 shadow-md">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
+            <div>
+              <h3 class="font-headline-sm text-xl text-text-dark font-semibold">Year-by-Year Growth Ledger</h3>
+              <p class="font-body-sm text-text-muted">Watch the mathematical transition where returns begin out-earning your monthly deposits.</p>
+            </div>
+            <button id="toggle-schedule-btn" type="button" class="inline-flex items-center gap-1.5 font-mono-sm text-xs font-semibold px-4 py-2 rounded-full bg-surface-container-lowest border border-text-dark/15 text-text-dark hover:bg-text-dark/5 transition-all">
+              <span class="material-symbols-outlined text-[16px]">expand_more</span>
+              <span id="schedule-btn-text">Show Full Schedule</span>
+            </button>
+          </div>
+
+          <!-- Schedule Table Container -->
+          <div class="overflow-x-auto">
+            <table class="w-full text-left font-mono-sm text-xs">
+              <thead>
+                <tr class="border-b border-text-dark/15 text-text-muted uppercase text-[11px]">
+                  <th class="py-3 px-3">Year</th>
+                  <th class="py-3 px-3">Monthly SIP</th>
+                  <th class="py-3 px-3">Annual Invested</th>
+                  <th class="py-3 px-3">Cumulative Invested</th>
+                  <th class="py-3 px-3 text-right">Estimated Corpus</th>
+                  <th class="py-3 px-3 text-right text-accent-green">Returns Share</th>
+                </tr>
+              </thead>
+              <tbody id="schedule-table-body" class="divide-y divide-text-dark/10 text-text-dark">
+                <!-- Dynamically Populated -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- TAB 2: TARGET GOAL PLANNER (REVERSE SIP) -->
+      <div id="view-goal" class="hidden space-y-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- CONTROLS COLUMN (7 cols) -->
+          <div class="lg:col-span-7 bg-bg-card rounded-3xl p-6 sm:p-8 border border-text-dark/15 shadow-lg space-y-7">
+            
+            <div>
+              <span class="font-mono-sm text-xs uppercase text-accent-orange font-bold tracking-wider block mb-1">Step 1 • Pick or Enter Your Dream Target</span>
+              <h3 class="font-headline-sm text-xl text-text-dark font-semibold mb-4">What are you saving for?</h3>
+              
+              <!-- Quick Goal Cards -->
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6">
+                <button type="button" class="goal-chip active p-3 rounded-2xl border border-accent-orange bg-accent-orange/10 text-left transition-all" data-target="1000000" data-years="5">
+                  <span class="material-symbols-outlined text-accent-orange text-[22px] block mb-1">shield</span>
+                  <div class="font-headline-sm text-xs font-semibold text-text-dark">Safety Cushion</div>
+                  <div class="font-mono-sm text-xs text-accent-orange font-bold">₹10 Lakhs • 5Y</div>
+                </button>
+                <button type="button" class="goal-chip p-3 rounded-2xl border border-text-dark/15 bg-surface-container-lowest text-left hover:border-accent-orange transition-all" data-target="2500000" data-years="7">
+                  <span class="material-symbols-outlined text-text-muted text-[22px] block mb-1">home</span>
+                  <div class="font-headline-sm text-xs font-semibold text-text-dark">Home Down Payment</div>
+                  <div class="font-mono-sm text-xs text-text-muted font-bold">₹25 Lakhs • 7Y</div>
+                </button>
+                <button type="button" class="goal-chip p-3 rounded-2xl border border-text-dark/15 bg-surface-container-lowest text-left hover:border-accent-orange transition-all" data-target="5000000" data-years="12">
+                  <span class="material-symbols-outlined text-text-muted text-[22px] block mb-1">school</span>
+                  <div class="font-headline-sm text-xs font-semibold text-text-dark">Child's Higher Ed</div>
+                  <div class="font-mono-sm text-xs text-text-muted font-bold">₹50 Lakhs • 12Y</div>
+                </button>
+                <button type="button" class="goal-chip p-3 rounded-2xl border border-text-dark/15 bg-surface-container-lowest text-left hover:border-accent-orange transition-all" data-target="10000000" data-years="15">
+                  <span class="material-symbols-outlined text-text-muted text-[22px] block mb-1">flag</span>
+                  <div class="font-headline-sm text-xs font-semibold text-text-dark">The First Crore</div>
+                  <div class="font-mono-sm text-xs text-text-muted font-bold">₹1 Crore • 15Y</div>
+                </button>
+                <button type="button" class="goal-chip p-3 rounded-2xl border border-text-dark/15 bg-surface-container-lowest text-left hover:border-accent-orange transition-all" data-target="30000000" data-years="20">
+                  <span class="material-symbols-outlined text-text-muted text-[22px] block mb-1">beach_access</span>
+                  <div class="font-headline-sm text-xs font-semibold text-text-dark">Early Retirement</div>
+                  <div class="font-mono-sm text-xs text-text-muted font-bold">₹3 Crores • 20Y</div>
+                </button>
+                <button type="button" class="goal-chip p-3 rounded-2xl border border-text-dark/15 bg-surface-container-lowest text-left hover:border-accent-orange transition-all" data-target="50000000" data-years="25">
+                  <span class="material-symbols-outlined text-text-muted text-[22px] block mb-1">diamond</span>
+                  <div class="font-headline-sm text-xs font-semibold text-text-dark">Generational Wealth</div>
+                  <div class="font-mono-sm text-xs text-text-muted font-bold">₹5 Crores • 25Y</div>
+                </button>
+              </div>
+
+              <!-- Custom Target Input -->
+              <div class="flex justify-between items-baseline mb-2">
+                <span class="font-headline-sm text-sm text-text-dark font-semibold">Custom Target Corpus</span>
+                <div class="flex items-center gap-1 bg-surface-container-lowest px-3 py-1 rounded-xl border border-text-dark/15 shadow-inner">
+                  <span class="font-mono-md text-text-muted font-medium">₹</span>
+                  <input type="number" id="input-goal-target" min="100000" max="100000000" step="100000" value="1000000" class="font-mono-lg font-bold text-accent-orange w-32 text-right bg-transparent focus:outline-none">
+                </div>
+              </div>
+              <input type="range" id="slider-goal-target" min="500000" max="30000000" step="500000" value="1000000" class="w-full h-2 bg-text-dark/10 rounded-lg appearance-none cursor-pointer accent-accent-orange focus:outline-none">
+            </div>
+
+            <!-- Time to Reach Goal -->
+            <div class="pt-3 border-t border-text-dark/10">
+              <div class="flex justify-between items-baseline mb-2">
+                <label for="input-goal-years" class="font-headline-sm text-sm text-text-dark font-semibold flex items-center gap-2">
+                  <span class="material-symbols-outlined text-accent-gold text-[18px]">timer</span>
+                  Years to Achieve This Goal
+                </label>
+                <div class="flex items-center gap-1 bg-surface-container-lowest px-3 py-1 rounded-xl border border-text-dark/15 shadow-inner">
+                  <input type="number" id="input-goal-years" min="1" max="40" step="1" value="5" class="font-mono-lg font-bold text-text-dark w-14 text-right bg-transparent focus:outline-none">
+                  <span class="font-mono-md text-text-muted font-medium">Yrs</span>
+                </div>
+              </div>
+              <input type="range" id="slider-goal-years" min="1" max="30" step="1" value="5" class="w-full h-2 bg-text-dark/10 rounded-lg appearance-none cursor-pointer accent-accent-gold focus:outline-none">
+            </div>
+
+            <!-- Expected Return Rate for Goal -->
+            <div class="pt-3 border-t border-text-dark/10">
+              <div class="flex justify-between items-baseline mb-2">
+                <label for="input-goal-rate" class="font-headline-sm text-sm text-text-dark font-semibold flex items-center gap-2">
+                  <span class="material-symbols-outlined text-accent-green text-[18px]">trending_up</span>
+                  Expected Annual Return (% p.a.)
+                </label>
+                <div class="flex items-center gap-1 bg-surface-container-lowest px-3 py-1 rounded-xl border border-text-dark/15 shadow-inner">
+                  <input type="number" id="input-goal-rate" min="6" max="25" step="0.5" value="12" class="font-mono-lg font-bold text-accent-green w-16 text-right bg-transparent focus:outline-none">
+                  <span class="font-mono-md text-text-muted font-medium">%</span>
+                </div>
+              </div>
+              <input type="range" id="slider-goal-rate" min="6" max="20" step="0.5" value="12" class="w-full h-2 bg-text-dark/10 rounded-lg appearance-none cursor-pointer accent-accent-green focus:outline-none">
+            </div>
+
+          </div>
+
+          <!-- GOAL RESULTS COLUMN (5 cols) -->
+          <div class="lg:col-span-5 space-y-6">
+            <div class="bg-bg-card rounded-3xl p-6 sm:p-8 border border-text-dark/15 shadow-xl relative overflow-hidden">
+              <span class="font-mono-sm uppercase text-text-muted text-xs tracking-wider block mb-2">Required Monthly Contribution</span>
+              
+              <!-- Required SIP Big Number -->
+              <div class="mb-6">
+                <div class="font-headline-lg text-4xl sm:text-5xl text-accent-orange font-bold tracking-tight" id="goal-req-sip">
+                  ₹12,244<span class="text-xl font-normal font-body-md text-text-muted">/mo</span>
+                </div>
+                <p class="font-body-sm text-text-muted mt-2">
+                  Invest this sum every month to accumulate <strong class="text-text-dark" id="goal-target-echo">₹10 Lakhs</strong> in <strong class="text-text-dark" id="goal-years-echo">5 Years</strong>.
+                </p>
+              </div>
+
+              <!-- Goal Breakdown Split -->
+              <div class="space-y-3 p-4 rounded-2xl bg-surface-container-lowest border border-text-dark/10 mb-6 font-mono-sm text-xs">
+                <div class="flex justify-between items-center pb-2 border-b border-text-dark/10">
+                  <span class="text-text-muted">Total Capital You Deposit:</span>
+                  <span class="font-bold text-text-dark" id="goal-total-invested">₹7,34,640</span>
+                </div>
+                <div class="flex justify-between items-center pb-2 border-b border-text-dark/10">
+                  <span class="text-accent-green font-medium">Interest &amp; Gains Earned:</span>
+                  <span class="font-bold text-accent-green" id="goal-total-gains">₹2,65,360</span>
+                </div>
+                <div class="flex justify-between items-center pt-1 font-semibold">
+                  <span class="text-text-dark">Compounding Contribution:</span>
+                  <span class="text-accent-green" id="goal-gains-share">26.5% paid by time</span>
+                </div>
+              </div>
+
+              <!-- Action Button -->
+              <a href="https://pbfinancial.investwell.app/app" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center font-body-md font-semibold text-on-tertiary bg-accent-orange px-6 py-3.5 rounded-full hover:brightness-105 active:scale-95 transition-all shadow-md text-center">
+                Lock In This Goal →
+              </a>
+              <span class="font-mono-sm text-[11px] text-text-muted text-center block mt-3">
+                Dedicated goal mapping with auto-pilot portfolio rebalancing
+              </span>
+
+            </div>
+
+            <!-- Pro Tip Box -->
+            <div class="bg-surface-container-lowest rounded-2xl p-5 border border-text-dark/15 shadow-sm">
+              <div class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-accent-gold text-[24px]">tips_and_updates</span>
+                <div>
+                  <h4 class="font-headline-sm text-sm font-semibold text-text-dark mb-1">The 5-Year Delay Penalty</h4>
+                  <p class="font-body-sm text-xs text-text-muted leading-relaxed">
+                    If you wait just 5 years to start, your required monthly SIP to hit this exact goal increases by nearly <strong>2.1x</strong>. Time is your greatest asset.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- FAQ & FINANCIAL LITERACY PILLARS -->
+      <div class="mt-16 pt-12 border-t border-text-dark/10 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 bg-bg-card rounded-2xl border border-text-dark/15">
+          <div class="w-10 h-10 rounded-xl bg-accent-green/10 text-accent-green flex items-center justify-center mb-3">
+            <span class="material-symbols-outlined text-[20px]">currency_rupee</span>
+          </div>
+          <h4 class="font-headline-sm text-base text-text-dark font-semibold mb-2">What is Rupee Cost Averaging?</h4>
+          <p class="font-body-sm text-text-muted leading-relaxed">
+            When markets dip, your fixed ₹SIP buys more fund units. When markets rise, your accumulated units swell in value. You automatically buy low and sell high without timing.
+          </p>
+        </div>
+        <div class="p-6 bg-bg-card rounded-2xl border border-text-dark/15">
+          <div class="w-10 h-10 rounded-xl bg-accent-orange/10 text-accent-orange flex items-center justify-center mb-3">
+            <span class="material-symbols-outlined text-[20px]">trending_up</span>
+          </div>
+          <h4 class="font-headline-sm text-base text-text-dark font-semibold mb-2">Why a 10% Step-Up Matters</h4>
+          <p class="font-body-sm text-text-muted leading-relaxed">
+            A simple ₹10,000 SIP yields ~₹1 Crore in 20 years. But stepping it up by 10% every year turns that exact same 20-year runway into ~₹2.1 Crores—more than doubling your wealth!
+          </p>
+        </div>
+        <div class="p-6 bg-bg-card rounded-2xl border border-text-dark/15">
+          <div class="w-10 h-10 rounded-xl bg-accent-gold/10 text-accent-gold flex items-center justify-center mb-3">
+            <span class="material-symbols-outlined text-[20px]">lock_open</span>
+          </div>
+          <h4 class="font-headline-sm text-base text-text-dark font-semibold mb-2">Liquid &amp; Zero Exit Penalties</h4>
+          <p class="font-body-sm text-text-muted leading-relaxed">
+            Open-ended mutual funds are 100% liquid. You can pause, increase, decrease, or withdraw your funds into your verified bank account anytime in 1–2 business days.
+          </p>
+        </div>
+      </div>
+
+      <!-- FOOTER CALLOUT BANNER -->
+      <div class="mt-16 bg-bg-card rounded-3xl p-8 md:p-12 border border-text-dark/15 text-center relative overflow-hidden shadow-lg">
+        <h3 class="font-headline-lg text-2xl md:text-3xl text-text-dark font-semibold mb-3">
+          Turn your simulation into reality today
+        </h3>
+        <p class="font-body-md text-text-muted max-w-xl mx-auto mb-6">
+          Access your verified InvestWell investor terminal to link your bank account, complete 3-minute paperless KYC, and automate your very first monthly SIP.
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="https://pbfinancial.investwell.app/app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center font-body-md font-semibold text-on-tertiary bg-accent-orange px-8 py-3.5 rounded-full hover:brightness-105 active:scale-95 transition-all shadow-md">
+            Start Your SIP →
+          </a>
+          <a href="https://pbfinancial.investwell.app/app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center font-body-md font-semibold text-text-dark bg-surface-container-lowest border border-text-dark/20 px-7 py-3.5 rounded-full hover:bg-text-dark/5 active:scale-95 transition-all">
+            Access Dashboard
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-bg-card py-16 border-t border-text-dark/10">
+    <div class="max-w-[1200px] mx-auto px-6 md:px-12">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 pb-10">
+        <div class="flex flex-col gap-2">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP75ontUFPU-GAQXafk9CHwkV4Ornfzrxgnxou-EYH8bjoy6CJSGB7WF7kUlXciUqyGrosetL3rDxn0W0Dxu2vdOMTV9_Qc1v8-rbnGKO6IZ470XgOG-QPRZfaGHAyoXljhxYzWbPA5Y54Uecp25PYep7YAhPLOuL-5ELkx-ZFMa3YhGYA7PqYWWQgWK8gjxJzr-fikpso8tuDg4zBGBijNZkPostSV3zrPKTZUHgzN7g62Kh1MpmblF5yqUYHYn8S" alt="P B Financial Services Logo" class="w-auto object-contain" style="height: 64px; max-height: 64px;">
+          <p class="font-body-sm text-text-muted max-w-sm">Empowering modern savers and first-time retail investors with clarity, compounding insights, and disciplined wealth creation.</p>
+        </div>
+        <div class="flex flex-wrap items-center gap-6">
+          <a class="font-body-sm text-text-muted hover:text-text-dark transition-colors" href="index.html#how-it-works">How It Works</a>
+          <a class="font-body-sm text-text-muted hover:text-text-dark transition-colors" href="index.html#four-basics">The 4 Basics</a>
+          <a class="font-body-sm text-accent-orange font-semibold transition-colors" href="calculator.html">SIP Calculator</a>
+          <a class="font-body-sm text-text-muted hover:text-text-dark transition-colors" href="index.html#about">About Us</a>
+          <a class="font-body-sm text-text-muted hover:text-text-dark transition-colors" href="#">Privacy Policy</a>
+          <a class="font-body-sm text-text-muted hover:text-text-dark transition-colors" href="#">Disclosures</a>
+        </div>
+      </div>
+      <div class="pt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-t border-text-dark/10">
+        <p class="font-mono-sm text-text-muted leading-relaxed max-w-2xl text-xs">
+          Disclaimer: Mutual fund investments are subject to market risks, read all scheme related documents carefully. P B Financial Services provides informational awareness tools and does not offer individualized advisory.
+        </p>
+        <p class="font-body-sm text-text-muted whitespace-nowrap text-xs">© 2025 P B FINANCIAL SERVICES. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- INTERACTIVE LOGIC SCRIPT -->
+  <script>
+    (function initCalculatorEngine() {
+      // TAB SWITCHER
+      const tabWealth = document.getElementById('tab-wealth');
+      const tabGoal = document.getElementById('tab-goal');
+      const viewWealth = document.getElementById('view-wealth');
+      const viewGoal = document.getElementById('view-goal');
+
+      tabWealth.addEventListener('click', () => {
+        tabWealth.className = 'planner-tab flex-1 py-2.5 px-4 rounded-xl font-mono-sm text-sm font-semibold bg-surface-container-lowest text-text-dark shadow-sm transition-all';
+        tabGoal.className = 'planner-tab flex-1 py-2.5 px-4 rounded-xl font-mono-sm text-sm font-semibold text-text-muted hover:text-text-dark transition-all';
+        viewWealth.classList.remove('hidden');
+        viewGoal.classList.add('hidden');
+      });
+
+      tabGoal.addEventListener('click', () => {
+        tabGoal.className = 'planner-tab flex-1 py-2.5 px-4 rounded-xl font-mono-sm text-sm font-semibold bg-surface-container-lowest text-text-dark shadow-sm transition-all';
+        tabWealth.className = 'planner-tab flex-1 py-2.5 px-4 rounded-xl font-mono-sm text-sm font-semibold text-text-muted hover:text-text-dark transition-all';
+        viewGoal.classList.remove('hidden');
+        viewWealth.classList.add('hidden');
+        calculateGoal();
+      });
+
+      // WEALTH BUILDER ELEMENTS
+      const inputSipAmount = document.getElementById('input-sip-amount');
+      const sliderSipAmount = document.getElementById('slider-sip-amount');
+      const inputReturnRate = document.getElementById('input-return-rate');
+      const sliderReturnRate = document.getElementById('slider-return-rate');
+      const inputYears = document.getElementById('input-years');
+      const sliderYears = document.getElementById('slider-years');
+
+      const toggleStepup = document.getElementById('toggle-stepup');
+      const stepupControls = document.getElementById('stepup-controls');
+      const badgeStepupIndicator = document.getElementById('badge-stepup-indicator');
+
+      const resTotalWealth = document.getElementById('res-total-wealth');
+      const resMultiplier = document.getElementById('res-multiplier');
+      const resGainPct = document.getElementById('res-gain-pct');
+      const resInvested = document.getElementById('res-invested');
+      const resGrowth = document.getElementById('res-growth');
+      const resInflationVal = document.getElementById('res-inflation-val');
+      const barWealthInvested = document.getElementById('bar-wealth-invested');
+      const barWealthGrowth = document.getElementById('bar-wealth-growth');
+
+      const milestone10l = document.getElementById('milestone-10l');
+      const milestone25l = document.getElementById('milestone-25l');
+      const milestone1cr = document.getElementById('milestone-1cr');
+
+      const scheduleTableBody = document.getElementById('schedule-table-body');
+      const toggleScheduleBtn = document.getElementById('toggle-schedule-btn');
+      const scheduleBtnText = document.getElementById('schedule-btn-text');
+
+      let stepupPct = 10;
+      let isStepupActive = false;
+      let isScheduleExpanded = false;
+
+      // Currency Formatter
+      function formatINR(val) {
+        return '₹' + Math.round(val).toLocaleString('en-IN');
+      }
+
+      function formatCompactINR(val) {
+        if (val >= 10000000) {
+          return '₹' + (val / 10000000).toFixed(2) + ' Cr';
+        } else if (val >= 100000) {
+          return '₹' + (val / 100000).toFixed(2) + ' L';
+        }
+        return '₹' + Math.round(val).toLocaleString('en-IN');
+      }
+
+      // SYNC INPUTS AND SLIDERS
+      function bindPair(input, slider, cb) {
+        input.addEventListener('input', () => {
+          slider.value = input.value;
+          cb();
+        });
+        slider.addEventListener('input', () => {
+          input.value = slider.value;
+          cb();
+        });
+      }
+
+      bindPair(inputSipAmount, sliderSipAmount, calculateWealth);
+      bindPair(inputReturnRate, sliderReturnRate, calculateWealth);
+      bindPair(inputYears, sliderYears, calculateWealth);
+
+      // PRESET CHIPS
+      document.querySelectorAll('.sip-preset-chip').forEach(chip => {
+        chip.addEventListener('click', () => {
+          document.querySelectorAll('.sip-preset-chip').forEach(c => {
+            c.className = 'sip-preset-chip px-3 py-1 rounded-full text-xs font-mono-sm bg-surface-container-lowest border border-text-dark/15 text-text-muted hover:text-text-dark hover:border-accent-orange transition-all';
+          });
+          chip.className = 'sip-preset-chip px-3 py-1 rounded-full text-xs font-mono-sm bg-accent-orange/15 border border-accent-orange text-accent-orange font-bold transition-all';
+          inputSipAmount.value = chip.getAttribute('data-val');
+          sliderSipAmount.value = inputSipAmount.value;
+          calculateWealth();
+        });
+      });
+
+      document.querySelectorAll('.return-preset-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.return-preset-btn').forEach(b => {
+            b.className = 'return-preset-btn p-2 rounded-xl border border-text-dark/10 bg-surface-container-lowest text-left hover:border-accent-green transition-all';
+            const nameEl = b.querySelector('.font-mono-sm');
+            if (nameEl) nameEl.className = 'font-mono-sm font-semibold text-text-dark text-xs';
+          });
+          btn.className = 'return-preset-btn active p-2 rounded-xl border border-accent-green bg-accent-green/10 text-left transition-all';
+          const nameEl = btn.querySelector('.font-mono-sm');
+          if (nameEl) nameEl.className = 'font-mono-sm font-semibold text-accent-green text-xs';
+          inputReturnRate.value = btn.getAttribute('data-rate');
+          sliderReturnRate.value = inputReturnRate.value;
+          calculateWealth();
+        });
+      });
+
+      document.querySelectorAll('.years-preset-chip').forEach(chip => {
+        chip.addEventListener('click', () => {
+          document.querySelectorAll('.years-preset-chip').forEach(c => {
+            c.className = 'years-preset-chip px-3 py-1 rounded-full text-xs font-mono-sm bg-surface-container-lowest border border-text-dark/15 text-text-muted hover:text-text-dark transition-all';
+          });
+          chip.className = 'years-preset-chip px-3 py-1 rounded-full text-xs font-mono-sm bg-accent-gold/15 border border-accent-gold text-accent-gold font-bold transition-all';
+          inputYears.value = chip.getAttribute('data-years');
+          sliderYears.value = inputYears.value;
+          calculateWealth();
+        });
+      });
+
+      // STEP-UP TOGGLE
+      toggleStepup.addEventListener('change', (e) => {
+        isStepupActive = e.target.checked;
+        if (isStepupActive) {
+          stepupControls.classList.remove('hidden');
+          badgeStepupIndicator.classList.remove('hidden');
+          badgeStepupIndicator.textContent = `+${stepupPct}% Step-Up`;
+        } else {
+          stepupControls.classList.add('hidden');
+          badgeStepupIndicator.classList.add('hidden');
+        }
+        calculateWealth();
+      });
+
+      document.querySelectorAll('.stepup-pct-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.stepup-pct-btn').forEach(b => {
+            b.className = 'stepup-pct-btn p-1.5 rounded-lg border border-text-dark/10 bg-bg-card font-mono-sm text-xs text-text-muted text-center hover:border-accent-orange transition-all';
+          });
+          btn.className = 'stepup-pct-btn p-1.5 rounded-lg border border-accent-orange bg-accent-orange/15 font-mono-sm text-xs font-bold text-accent-orange text-center transition-all';
+          stepupPct = parseInt(btn.getAttribute('data-pct'), 10);
+          badgeStepupIndicator.textContent = `+${stepupPct}% Step-Up`;
+          calculateWealth();
+        });
+      });
+
+      // CALCULATE WEALTH FUNCTION
+      function calculateWealth() {
+        const baseMonthly = parseFloat(inputSipAmount.value) || 0;
+        const annualRate = (parseFloat(inputReturnRate.value) || 0) / 100;
+        const totalYears = parseInt(inputYears.value, 10) || 1;
+        const monthlyRate = annualRate / 12;
+
+        let totalInvested = 0;
+        let futureCorpus = 0;
+        let currentMonthly = baseMonthly;
+
+        const schedule = [];
+        let m10Years = null;
+        let m25Years = null;
+        let m1crYears = null;
+
+        // Month-by-month calculation
+        const totalMonths = totalYears * 12;
+        let cumulativeInvested = 0;
+        let runningCorpus = 0;
+
+        for (let m = 1; m <= totalMonths; m++) {
+          // If stepup active, increase monthly SIP at the beginning of each year after year 1
+          if (isStepupActive && m > 1 && (m - 1) % 12 === 0) {
+            currentMonthly = currentMonthly * (1 + (stepupPct / 100));
+          }
+
+          cumulativeInvested += currentMonthly;
+          runningCorpus = (runningCorpus + currentMonthly) * (1 + monthlyRate);
+
+          if (!m10Years && runningCorpus >= 1000000) m10Years = (m / 12).toFixed(1);
+          if (!m25Years && runningCorpus >= 2500000) m25Years = (m / 12).toFixed(1);
+          if (!m1crYears && runningCorpus >= 10000000) m1crYears = (m / 12).toFixed(1);
+
+          // Save year end snapshot
+          if (m % 12 === 0) {
+            const y = m / 12;
+            schedule.push({
+              year: y,
+              monthly: currentMonthly,
+              annualInvested: currentMonthly * 12,
+              cumulativeInvested: cumulativeInvested,
+              corpus: runningCorpus,
+              growth: runningCorpus - cumulativeInvested
+            });
+          }
+        }
+
+        totalInvested = cumulativeInvested;
+        futureCorpus = runningCorpus;
+        const totalReturns = Math.max(0, futureCorpus - totalInvested);
+        const multiplier = totalInvested > 0 ? (futureCorpus / totalInvested).toFixed(1) : '1.0';
+        const gainPctVal = totalInvested > 0 ? (((futureCorpus - totalInvested) / totalInvested) * 100).toFixed(0) : '0';
+
+        // Inflation adjustment (6% annual inflation)
+        const inflationRate = 0.06;
+        const realPurchasingPower = futureCorpus / Math.pow(1 + inflationRate, totalYears);
+
+        // UI Updates
+        resTotalWealth.textContent = formatINR(futureCorpus);
+        resMultiplier.textContent = `${multiplier}x`;
+        resGainPct.textContent = `(+${gainPctVal}% return)`;
+        resInvested.textContent = formatINR(totalInvested);
+        resGrowth.textContent = formatINR(totalReturns);
+        resInflationVal.textContent = formatCompactINR(realPurchasingPower);
+
+        const investedPct = Math.max(8, Math.min(92, (totalInvested / futureCorpus) * 100));
+        const growthPct = 100 - investedPct;
+        barWealthInvested.style.width = investedPct + '%';
+        barWealthGrowth.style.width = growthPct + '%';
+
+        // Milestones
+        milestone10l.textContent = m10Years ? `Reached in ~${m10Years} Years` : 'Beyond selected horizon';
+        milestone25l.textContent = m25Years ? `Reached in ~${m25Years} Years` : 'Beyond selected horizon';
+        milestone1cr.textContent = m1crYears ? `Reached in ~${m1crYears} Years` : 'Beyond selected horizon';
+
+        // Render Schedule Table
+        renderScheduleTable(schedule);
+      }
+
+      function renderScheduleTable(schedule) {
+        scheduleTableBody.innerHTML = '';
+        const displayList = isScheduleExpanded ? schedule : schedule.slice(0, 5);
+
+        displayList.forEach(item => {
+          const returnsSharePct = Math.round((item.growth / item.corpus) * 100);
+          const tr = document.createElement('tr');
+          tr.className = 'hover:bg-text-dark/[0.02] transition-colors';
+          tr.innerHTML = `
+            <td class="py-3 px-3 font-bold">Year ${item.year}</td>
+            <td class="py-3 px-3 text-text-muted">${formatINR(item.monthly)}</td>
+            <td class="py-3 px-3 text-text-muted">${formatINR(item.annualInvested)}</td>
+            <td class="py-3 px-3 font-medium">${formatINR(item.cumulativeInvested)}</td>
+            <td class="py-3 px-3 text-right font-bold text-accent-green">${formatINR(item.corpus)}</td>
+            <td class="py-3 px-3 text-right text-accent-green font-semibold">${returnsSharePct}% gains</td>
+          `;
+          scheduleTableBody.appendChild(tr);
+        });
+
+        if (!isScheduleExpanded && schedule.length > 5) {
+          const trMore = document.createElement('tr');
+          trMore.innerHTML = `
+            <td colspan="6" class="py-3 text-center text-text-muted text-[11px] bg-surface-container-lowest/50 italic">
+              + ${schedule.length - 5} more years hidden. Click "Show Full Schedule" above.
+            </td>
+          `;
+          scheduleTableBody.appendChild(trMore);
+        }
+      }
+
+      toggleScheduleBtn.addEventListener('click', () => {
+        isScheduleExpanded = !isScheduleExpanded;
+        scheduleBtnText.textContent = isScheduleExpanded ? 'Collapse Schedule' : 'Show Full Schedule';
+        calculateWealth();
+      });
+
+      // TAB 2: GOAL PLANNER LOGIC
+      const inputGoalTarget = document.getElementById('input-goal-target');
+      const sliderGoalTarget = document.getElementById('slider-goal-target');
+      const inputGoalYears = document.getElementById('input-goal-years');
+      const sliderGoalYears = document.getElementById('slider-goal-years');
+      const inputGoalRate = document.getElementById('input-goal-rate');
+      const sliderGoalRate = document.getElementById('slider-goal-rate');
+
+      const goalReqSip = document.getElementById('goal-req-sip');
+      const goalTargetEcho = document.getElementById('goal-target-echo');
+      const goalYearsEcho = document.getElementById('goal-years-echo');
+      const goalTotalInvested = document.getElementById('goal-total-invested');
+      const goalTotalGains = document.getElementById('goal-total-gains');
+      const goalGainsShare = document.getElementById('goal-gains-share');
+
+      bindPair(inputGoalTarget, sliderGoalTarget, calculateGoal);
+      bindPair(inputGoalYears, sliderGoalYears, calculateGoal);
+      bindPair(inputGoalRate, sliderGoalRate, calculateGoal);
+
+      document.querySelectorAll('.goal-chip').forEach(chip => {
+        chip.addEventListener('click', () => {
+          document.querySelectorAll('.goal-chip').forEach(c => {
+            c.className = 'goal-chip p-3 rounded-2xl border border-text-dark/15 bg-surface-container-lowest text-left hover:border-accent-orange transition-all';
+            const icon = c.querySelector('.material-symbols-outlined');
+            if (icon) icon.className = 'material-symbols-outlined text-text-muted text-[22px] block mb-1';
+            const sub = c.querySelector('.font-mono-sm');
+            if (sub) sub.className = 'font-mono-sm text-xs text-text-muted font-bold';
+          });
+          chip.className = 'goal-chip active p-3 rounded-2xl border border-accent-orange bg-accent-orange/10 text-left transition-all';
+          const icon = chip.querySelector('.material-symbols-outlined');
+          if (icon) icon.className = 'material-symbols-outlined text-accent-orange text-[22px] block mb-1';
+          const sub = chip.querySelector('.font-mono-sm');
+          if (sub) sub.className = 'font-mono-sm text-xs text-accent-orange font-bold';
+
+          inputGoalTarget.value = chip.getAttribute('data-target');
+          sliderGoalTarget.value = inputGoalTarget.value;
+          inputGoalYears.value = chip.getAttribute('data-years');
+          sliderGoalYears.value = inputGoalYears.value;
+          calculateGoal();
+        });
+      });
+
+      function calculateGoal() {
+        const target = parseFloat(inputGoalTarget.value) || 1000000;
+        const years = parseInt(inputGoalYears.value, 10) || 5;
+        const annualRate = (parseFloat(inputGoalRate.value) || 12) / 100;
+        const i = annualRate / 12;
+        const n = years * 12;
+
+        // P = Target / [(((1 + i)^n - 1) / i) * (1 + i)]
+        const compoundingFactor = ((Math.pow(1 + i, n) - 1) / i) * (1 + i);
+        const reqSip = target / compoundingFactor;
+        const totalInvested = reqSip * n;
+        const totalGains = target - totalInvested;
+        const gainsSharePct = ((totalGains / target) * 100).toFixed(1);
+
+        goalReqSip.innerHTML = `${formatINR(reqSip)}<span class="text-xl font-normal font-body-md text-text-muted">/mo</span>`;
+        goalTargetEcho.textContent = formatCompactINR(target);
+        goalYearsEcho.textContent = `${years} Year${years > 1 ? 's' : ''}`;
+        goalTotalInvested.textContent = formatINR(totalInvested);
+        goalTotalGains.textContent = formatINR(totalGains);
+        goalGainsShare.textContent = `${gainsSharePct}% paid by market compounding`;
+      }
+
+      // Initial runs
+      calculateWealth();
+      calculateGoal();
+    })();
+  </script>
+</body>
+</html>

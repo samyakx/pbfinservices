@@ -1,0 +1,14 @@
+# AWS Region
+aws_region = "ap-south-1"
+
+# S3 Bucket Name
+# Note: Bucket names must be globally unique across all AWS accounts.
+# If 'pbfinancialservices' is already taken in AWS, customize it below (e.g., 'pbfinancialservices-prod' or 'pbfinancialservices-app').
+bucket_name = "pbfinancialservices"
+
+# Environment tag
+environment = "production"
+
+# Website documents
+index_document = "index.html"
+error_document = "index.html"
